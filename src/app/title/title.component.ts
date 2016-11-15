@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { UserService } from './user.service';
+import { UserService } from './../user.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-title',
+  templateUrl: './title.component.html',
+  styleUrls: ['./title.component.css']
 })
-export class AppComponent {
+export class TitleComponent {
   @Input() subtitle = '';
   title = 'Angular Modules';
   user = '';
