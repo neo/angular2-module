@@ -15,7 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     ContactModule,
-    CoreModule,
+    CoreModule.forRoot({userName: 'Neo'}),
     AppRoutingModule
   ],
   declarations: [ AppComponent ],

@@ -6,6 +6,7 @@ import { CommonModule }      from '@angular/common';
 
 import { TitleComponent }    from './title/title.component';
 import { UserService }       from './user.service';
+import { UserServiceConfig } from './user.service';
 @NgModule({
   imports:      [ CommonModule ],
   declarations: [ TitleComponent ],
@@ -13,4 +14,12 @@ import { UserService }       from './user.service';
   providers:    [ UserService ]
 })
 export class CoreModule {
+  static forRoot(config: UserServiceConfig): ModuleWithProviders {
+    return {
+      ngModule: CoreModule,
+      providers: [
+        {provide: UserServiceConfig, useValue: config }
+      ]
+    };
+  }
 }
